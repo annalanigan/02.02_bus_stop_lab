@@ -26,6 +26,8 @@ class Bus
     @passengers = remaining_passengers
   end
 
-  
+  def empty_bus
+    @passengers.clear
+  end
 
 end
