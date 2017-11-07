@@ -52,4 +52,13 @@ class TestBus < MiniTest::Test
     assert_equal(0, @bus.passengers.count)
   end
 
+  def test_pick_up_from_stop
+    @bus_stop1.add_to_queue(@person1)
+    @bus_stop1.add_to_queue(@person2)
+    @bus_stop1.add_to_queue(@person3)
+    @bus.pick_up_from_stop(@bus_stop1)
+    assert_equal(0, @bus_stop1.queue.count)
+    assert_equal(3, @bus.passengers.count)
+  end
+
 end
