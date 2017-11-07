@@ -6,4 +6,8 @@ class Bus
     @destination = destination
   end
 
+  def drive_noise(noise)
+    return noise
+  end
+
 end

@@ -16,5 +16,10 @@ class TestBus < MiniTest::Test
     assert_equal(62, @bus.route_number)
   end
 
+  def test_drive_noise
+    result = @bus.drive_noise("Phut phut")
+    assert_equal("Phut phut", result)
+  end
+
 
 end
