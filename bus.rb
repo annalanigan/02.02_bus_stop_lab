@@ -12,4 +12,7 @@ class Bus
     return noise
   end
 
+  def pick_up(person)
+    @passengers << person
+  end
 end
