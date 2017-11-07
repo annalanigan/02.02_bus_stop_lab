@@ -21,5 +21,8 @@ class TestBus < MiniTest::Test
     assert_equal("Phut phut", result)
   end
 
+  def test_count_passengers
+    assert_equal(0, @bus.passengers.count)
+  end
 
 end
