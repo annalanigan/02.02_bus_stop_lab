@@ -6,8 +6,4 @@ class Person
     @age = age
   end
 
-
-
-
-
 end

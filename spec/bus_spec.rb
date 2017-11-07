@@ -7,6 +7,7 @@ class TestBus < MiniTest::Test
 
   def setup
     @person1 = Person.new("Hilary", 68)
+    @person2 = Person.new("Barack", 57)
     @bus = Bus.new(62, "Peebles")
   end
 
@@ -29,6 +30,13 @@ class TestBus < MiniTest::Test
 
   def test_pick_up
     @bus.pick_up(@person1)
+    assert_equal(1, @bus.passengers.count)
+  end
+
+  def test_drop_off
+    @bus.pick_up(@person1)
+    @bus.pick_up(@person2)
+    @bus.drop_off(@person2)
     assert_equal(1, @bus.passengers.count)
   end
 
